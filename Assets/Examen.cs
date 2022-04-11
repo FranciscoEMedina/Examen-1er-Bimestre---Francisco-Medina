@@ -12,10 +12,11 @@ public class Examen : MonoBehaviour
     void Start()
     {
         
-        if (CategoriaDelAnimal != "G" &&CategoriaDelAnimal != "PP" && CategoriaDelAnimal != "PG" && DiasEstadia <=2)
+        if (CategoriaDelAnimal != "G" && CategoriaDelAnimal != "PP" && CategoriaDelAnimal != "PG"|| DiasEstadia <= 2)
         {
-            Debug.Log("La categoria del animal no existe o su estadia es menor a 3 días");
+            Debug.Log("La categoria del animal no existe o la cantidad de días es menor a 3");
         }
+    
         else if (CategoriaDelAnimal == "G")
         {
             GramosDeAlimeto= DiasEstadia * 300;
